@@ -157,17 +157,17 @@ processResources {
     }
 }
 
-jar {
-    archiveFileName = 'igv.jar'
-    manifest {
-        attributes(
-            "Permissions": "all-permissions",
-            "Application-Name": "IGV",
-            "Built-By": System.getProperty('user.name'),
-            "Main-Class": mainClassName,
-        )
-    }
-}
+// jar {
+//     archiveFileName = 'igv.jar'
+//     manifest {
+//         attributes(
+//             "Permissions": "all-permissions",
+//             "Application-Name": "IGV",
+//             "Built-By": System.getProperty('user.name'),
+//             "Main-Class": mainClassName,
+//         )
+//     }
+// }
 
 compileJava {
     inputs.property("moduleName", moduleName)
@@ -218,6 +218,7 @@ test {
     }
 }
 
+/*
 task createDist(type: Copy, dependsOn: jar)  {
     from ("web/IGV_64.png")
     from ("scripts") {
@@ -472,6 +473,7 @@ task fullJar(type: Jar, dependsOn: jar) {
         )
     }
 }
+*/
 
 //build.dependsOn createDistZip,createLinuxDistZip,createMacDistZip,createMacAppDistZip
 
