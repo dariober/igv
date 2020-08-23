@@ -25,6 +25,10 @@ apply plugin: 'java'
 // apply plugin: 'maven'
 apply plugin: 'application'
 
+def jversion= JavaVersion.VERSION_1_9
+sourceCompatibility= jversion 
+targetCompatibility= jversion
+
 import org.apache.tools.ant.filters.ReplaceTokens
 //import proguard.gradle.ProGuardTask
 
